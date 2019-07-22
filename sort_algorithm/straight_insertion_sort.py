@@ -7,8 +7,8 @@
  """
 __author__ = 'liujianhan'
 from data_structure.function_process_time import RuntimeTest
-from data_structure.sort_algorithm.bubble_sort import BubbleSort
-from data_structure.sort_algorithm.straight_selection_sort import SelectionSort
+from sort_algorithm.bubble_sort import BubbleSort
+from sort_algorithm.straight_selection_sort import SelectionSort
 
 
 class InsertionSort:
