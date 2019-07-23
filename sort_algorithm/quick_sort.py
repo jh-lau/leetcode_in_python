@@ -42,9 +42,39 @@ class QuickSort:
         num_list[right_index] = base_value
 
         left_list = num_list[:right_index]
-        right_list = num_list[right_index+1:]
+        right_list = num_list[right_index + 1:]
 
         return QuickSort.quick_sort(left_list) + [num_list[right_index]] + QuickSort.quick_sort(right_list)
+
+    @staticmethod
+    def quick_sort_3partition(sorting, left, right):
+        if right <= left:
+            return
+        a = i = left
+        b = right
+        pivot = sorting[left]
+        while i <= b:
+            if sorting[i] < pivot:
+                sorting[a], sorting[i] = sorting[i], sorting[a]
+                a += 1
+                i += 1
+            elif sorting[i] > pivot:
+                sorting[b], sorting[i] = sorting[i], sorting[b]
+                b -= 1
+            else:
+                i += 1
+        QuickSort.quick_sort_3partition(sorting, left, a - 1)
+        QuickSort.quick_sort_3partition(sorting, b + 1, right)
+
+    @staticmethod
+    def quick_sort_more_space(array):
+        if len(array) < 2: return array
+        else:
+            pivot = array[0]
+            lesser = [i for i in array[1:] if i < pivot]
+            greater = [i for i in array[1:] if i > pivot]
+            return QuickSort.quick_sort_more_space(lesser) + pivot + QuickSort.quick_sort_more_space(greater)
+
 
 
 if __name__ == '__main__':
@@ -56,4 +86,3 @@ if __name__ == '__main__':
     print(QuickSort.quick_sort(test))
     assert QuickSort.quick_sort(test_1) == [0, 1, 3, 4, 5, 9]
     # print(quick_sort(test_case))
-

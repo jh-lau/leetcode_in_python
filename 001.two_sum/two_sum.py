@@ -20,21 +20,8 @@ class Solution:
             d[num] = i
         return False
 
-    @staticmethod
-    @RuntimeTest()
-    def two_sum_test(nums, target):
-        # 错误的示范
-        d = {}
-        for i, num in enumerate(nums):
-            d[num] = i
-            n = target - num
-            if n in d:
-                return [d[n], i]
-        return False
-
-
 test_1 = [3, 2, 4, 12, -1, 6]
 test = [3, 3]
 result = Solution().two_sum(test_1, 6)
-result_2 = Solution().two_sum_test(test_1, 6)
+
 
