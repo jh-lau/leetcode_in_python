@@ -17,6 +17,11 @@ class Solution:
         return temp
 
     def longest_common_prefix(self, strs) -> str:
+        """
+        从尾往前匹配
+        :param strs:
+        :return:
+        """
         if not strs:
             return ''
         shortest_string = self.get_shortest_string(strs)
@@ -31,6 +36,30 @@ class Solution:
                 else:
                     shortest_string = shortest_string[:-1]
                     length -= 1
-            #todo:可优化，否则需要等到temp减小到0才退出
+            # todo:可优化，否则需要等到temp减小到0才退出
             temp -= 1
         return shortest_string if shortest_string else ''
+
+    # 使用api
+    @staticmethod
+    def longest_common_prefix_api(strs):
+        result = ''
+        for temp in zip(*strs):
+            if len(set(temp)) != 1:
+                break
+            result += temp[0]
+        return result
+
+if __name__ == '__main__':
+    t = Solution()
+    assert t.longest_common_prefix([]) == ''
+    assert t.longest_common_prefix([""]) == ''
+    assert t.longest_common_prefix(['a']) == 'a'
+    assert t.longest_common_prefix(['a', 'b']) == ''
+    assert t.longest_common_prefix(['a', 'a']) == 'a'
+    assert t.longest_common_prefix_api([]) == ''
+    assert t.longest_common_prefix_api([""]) == ''
+    assert t.longest_common_prefix_api(['a']) == 'a'
+    assert t.longest_common_prefix_api(['a', 'b']) == ''
+    assert t.longest_common_prefix_api(['a', 'a']) == 'a'
+    print('test pass')
