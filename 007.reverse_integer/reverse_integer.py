@@ -4,10 +4,11 @@
  """
 __author__ = 'liujianhan'
 
+
 class Solution:
     @staticmethod
     def reverse(x: int) -> int:
-        range_ = range(-2**31, 2**31)
+        range_ = range(-2 ** 31, 2 ** 31)
         temp, flag = 0, 0
         if x not in range_: return 0
         x_ = -x if x < 0 else x
