@@ -4,11 +4,13 @@
  """
 __author__ = 'liujianhan'
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     @staticmethod
@@ -20,6 +22,3 @@ class Solution:
                 root = root.right
             else:
                 return root
-            
-
-        
