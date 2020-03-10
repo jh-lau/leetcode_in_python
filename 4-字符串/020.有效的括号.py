@@ -2,7 +2,6 @@
   User: Liujianhan
   Time: 15:51
  """
-__author__ = 'liujianhan'
 
 
 class Solution:
