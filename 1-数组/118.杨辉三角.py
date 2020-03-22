@@ -14,3 +14,7 @@ class Solution:
                 for j, num in enumerate(result[i - 1][:-1]):
                     result[i][j + 1] = num + result[i - 1][j + 1]
         return result
+
+
+if __name__ == '__main__':
+    print(Solution().generate(4))
