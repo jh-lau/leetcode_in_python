@@ -31,6 +31,7 @@ def create_list():
     cur.next = ListNode(1)
     cur.next.next = ListNode(2)
     cur.next.next.next = ListNode(3)
+    cur.next.next.next.next = ListNode(3)
     return head
 
 
