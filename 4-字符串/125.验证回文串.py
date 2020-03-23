@@ -11,8 +11,6 @@ class Solution:
     # 40ms, 14.4MB
     @classmethod
     def is_palindrome(cls, s: str) -> bool:
-        if s == '':
-            return True
         new_s = ''.join([char for char in s if char.isalnum()]).lower()
         return new_s == new_s[::-1]
 
