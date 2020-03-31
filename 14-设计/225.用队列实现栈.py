@@ -16,8 +16,8 @@ empty() -- 返回栈是否为空
 from collections import deque
 
 
-# 36ms, 13.8MB
 class MyStack:
+    # 36ms, 13.8MB
     def __init__(self):
         self.stack = deque()
 
