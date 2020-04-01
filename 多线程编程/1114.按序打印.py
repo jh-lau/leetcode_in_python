@@ -94,13 +94,20 @@ class Foo3:
         self.l1.release()
 
     def second(self, print_second: Callable[[], None]) -> None:
-        self.l1.acquire()
-        print_second()
-        self.l2.release()
+        # self.l1.acquire()
+        # print_second()
+        # self.l2.release()
+
+        with self.l1:
+            print_second()
+            self.l2.release()
 
     def third(self, print_third: Callable[[], None]) -> None:
-        self.l2.acquire()
-        print_third()
+        # self.l2.acquire()
+        # print_third()
+
+        with self.l2:
+            print_third()
 
 
 class Foo4:
