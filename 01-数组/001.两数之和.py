@@ -21,6 +21,7 @@ class Solution:
         return False
 
 
-test_1 = [3, 2, 4, 12, -1, 6]
-test = [3, 3]
-result = Solution().two_sum(test_1, 6)
+if __name__ == '__main__':
+    test_1 = [3, 2, 4, 12, -1, 6]
+    test = [3, 3]
+    result = Solution().two_sum(test_1, 6)
