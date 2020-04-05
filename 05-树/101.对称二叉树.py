@@ -4,11 +4,13 @@
  """
 __author__ = 'liujianhan'
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def is_symmetric(self, root):
@@ -25,4 +27,4 @@ class Solution:
             return False
 
         return self.helper(left.left, right.right) and \
-                self.helper(left.right, right.left)
+               self.helper(left.right, right.left)

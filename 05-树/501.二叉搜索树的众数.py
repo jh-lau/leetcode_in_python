@@ -11,6 +11,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     prev = None
     max_count = 0
