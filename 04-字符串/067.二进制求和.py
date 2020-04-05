@@ -8,6 +8,7 @@
 
 
 class Solution:
+    # 32ms, 13MB
     @staticmethod
     def add_binary(a: str, b: str) -> str:
         return bin(eval(f'0b{a}') + eval(f'0b{b}'))[2:]

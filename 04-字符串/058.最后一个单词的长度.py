@@ -11,12 +11,23 @@
 
 
 class Solution:
+    # 28ms, 13.2MB
     @staticmethod
     def length_of_last_word(s: str) -> int:
         if not s or s.isspace():
             return 0
         return len(s.split()[-1])
 
+    # 52ms, 13.5MB
+    @classmethod
+    def length_of_last_word_v2(cls, s:str) -> int:
+        s = s.strip()
+        if len(s) != 0:
+            return len(s.split()[-1])
+        else:
+            return 0
+
 
 if __name__ == '__main__':
     print(Solution().length_of_last_word('a '))
+    print(Solution.length_of_last_word_v2('a '))
