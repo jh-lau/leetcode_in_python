@@ -12,7 +12,7 @@ from typing import List
 
 
 class Solution:
-    #
+    # 32ms, 13.7MB
     @classmethod
     def letter_combinations(cls, digits: str) -> List[str]:
         phone = {'2': ['a', 'b', 'c'],
