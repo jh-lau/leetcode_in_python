@@ -30,3 +30,4 @@ if __name__ == '__main__':
     ]
     for tc in test_cases:
         print(Solution.sum_nums(tc))
+
