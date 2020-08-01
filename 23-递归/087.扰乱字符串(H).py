@@ -79,7 +79,8 @@ class Solution:
             return False
 
         for i in range(1, len(s1)):
-            if cls.is_scramble_v2(s1[:i], s2[:i]) and cls.is_scramble_v2(s1[i:], s2[i:]) or cls.is_scramble_v2(s1[:i], s2[-i:]) and cls.is_scramble_v2(s1[i:], s2[:-i]):
+            if cls.is_scramble_v2(s1[:i], s2[:i]) and cls.is_scramble_v2(s1[i:], s2[i:]) \
+                    or cls.is_scramble_v2(s1[:i], s2[-i:]) and cls.is_scramble_v2(s1[i:], s2[:-i]):
                 return True
 
         return False
