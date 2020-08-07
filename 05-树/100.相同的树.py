@@ -16,7 +16,7 @@ class Solution:
     def is_same_tree(self, p, q):
         if p and q:
             return p.val == q.val and self.is_same_tree(p.left, q.left) and \
-            self.is_same_tree(q.right, p.right)
+                   self.is_same_tree(q.right, p.right)
         if p is None and q is None:
             return True
         else:
