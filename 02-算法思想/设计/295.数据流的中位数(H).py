@@ -39,7 +39,3 @@ class MedianFinder:
             return (-self.max_heap[0] + self.min_heap[0]) / 2
         return self.min_heap[0]
 
-# Your MedianFinder object will be instantiated and called as such:
-# obj = MedianFinder()
-# obj.addNum(num)
-# param_2 = obj.findMedian()
