@@ -26,9 +26,6 @@ import heapq
 class MedianFinder:
     # 244ms, 25.2MB
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.max_heap, self.min_heap = [], []
 
     def addNum(self, num: int) -> None:
