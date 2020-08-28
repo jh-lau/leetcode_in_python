@@ -19,7 +19,7 @@ from typing import List
 
 
 class Solution:
-    #
+    # 48ms, 14.8MB
     @staticmethod
     def find_closest_elements(arr: List[int], k: int, x: int) -> List[int]:
         size = len(arr)
