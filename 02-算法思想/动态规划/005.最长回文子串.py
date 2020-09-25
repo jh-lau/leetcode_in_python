@@ -26,7 +26,9 @@ class Solution:
         return res
 
 
-print(Solution().longest_palindrome('babad'))
-print(Solution().longest_palindrome('cbbd'))
-print(Solution().longest_palindrome('c'))
-print(Solution().longest_palindrome('cdabababad'))
+if __name__ == '__main__':
+    test_cases = [
+        'babad', 'cbbd', 'c', 'cdabababad'
+    ]
+    for tc in test_cases:
+        print(Solution.longest_palindrome(tc))
