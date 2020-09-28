@@ -59,13 +59,10 @@ class Solution:
     # 464ms, 20.2MB
     @staticmethod
     def is_rectangle_cover(rectangles: List[List[int]]) -> bool:
-        m = len(rectangles)
-
         s = 0
         vector = set()
 
-        for i in range(m):
-            x1, y1, x2, y2 = rectangles[i]
+        for x1, y1, x2, y2 in rectangles:
             s += (x2 - x1) * (y2 - y1)  # 当前矩形区域的计算面积，并进行统计
             for ele in [(x1, y1), (x1, y2), (x2, y1), (x2, y2)]:
                 if ele in vector:
@@ -73,7 +70,7 @@ class Solution:
                 else:
                     vector.add(ele)  # 新的坐标就添加
 
-        vector = list(set(vector))  # 转成列表进行排序
+        vector = list(vector)  # 转成列表进行排序
         vector.sort()
 
         if len(vector) != 4:  # 如果不是四个坐标说明有缺少区域
