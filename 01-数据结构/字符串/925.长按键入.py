@@ -38,27 +38,21 @@ class Solution:
     # 52ms, 13.6MB
     @classmethod
     def is_long_press_name(cls, name: str, typed: str) -> bool:
-        i, j = 0, 0
-        for i in range(len(typed)):
-            if j == len(name) - 1 and name[j] == typed[i]:
-                return True
-            if typed[i] == name[j]:
+        i = 0
+        j = 0
+        while j < len(typed):
+            if i < len(name) and name[i] == typed[j]:
+                i += 1
                 j += 1
-        return False
-
-    # 52ms, 13.4MB
-    @classmethod
-    def is_long_press_name_v2(cls, name: str, typed: str) -> bool:
-        left = 0
-        for j in range(len(typed)):
-            if name[left] == typed[j]:
-                left += 1
-            if left == len(name):
-                return True
-        return False
+            elif j > 0 and typed[j] == name[i - 1]:  # 这里也可以用  “i > 0” 或者 官方的 "typed[j] == typed[j - 1]"
+                j += 1
+            else:
+                return False
+        return i == len(name)
 
 
 if __name__ == '__main__':
-    test_cases = [('alex', 'aaleex'), ('saeed', 'ssaaedd'), ('leelee', 'lleelee'), ('laiden', 'laiden')]
+    test_cases = [('alex', 'aaleex'), ('saeed', 'ssaaedd'), ('leelee', 'lleelee'), ('laiden', 'laiden'),
+                  ("alex", "aaleelx")]
     for tc in test_cases:
         print(tc, Solution.is_long_press_name(*tc))
