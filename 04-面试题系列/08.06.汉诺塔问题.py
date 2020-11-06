@@ -25,7 +25,7 @@ from typing import List
 
 
 class Solution:
-    #
+    # 36ms, 13.6MB
     def hanota(self, A: List[int], B: List[int], C: List[int]) -> None:
         """
         Do not return anything, modify C in-place instead.
