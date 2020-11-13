@@ -48,9 +48,13 @@ class Solution:
 
         cur, pre, temp = head, None, None
         while cur:
+            # 先将 cur.next 保存在 temp 中防止链表丢失：temp = cur.next
             temp = cur.next
+            # 接着把 cur.next 指向前驱节点 pre：cur.next = pre
             cur.next = pre
+            # 然后将 pre 往后移一位也就是移到当前 cur 的位置：pre = cur
             pre = cur
+            # 最后把 cur 也往后移一位也就是 temp 的位置：cur = temp
             cur = temp
 
         return pre
