@@ -19,16 +19,34 @@
 
 
 class Solution:
-    #
+    # 32ms, 13.5MB
     @staticmethod
     def rotate_string(A: str, B: str) -> bool:
-        pass
+        if not A and not B:
+            return True
+        for i, char in enumerate(A):
+            if char == B[0]:
+                new_string = A[i:] + A[:i]
+                if B == new_string:
+                    return True
+
+        return False
+
+    # 44ms, 13.2MB
+    @staticmethod
+    def rotate_string_v2(A: str, B: str) -> bool:
+        if len(A) != len(B):
+            return False
+        if B in A+A:
+            return True
+        return False
 
 
 if __name__ == '__main__':
     test_cases = [
         ('abcde', 'cdeab'),
-        ('abcde', 'abced')
+        ('abcde', 'abced'),
+        ('', '')
     ]
     for tc in test_cases:
         print(Solution.rotate_string(*tc))
