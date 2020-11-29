@@ -1,5 +1,6 @@
 """
   User: Liujianhan
+  https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-by-leetcode-soluti/
  """
 __author__ = 'liujianhan'
 
@@ -37,6 +38,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [10, 9, 2, 5, 3, 7, 101, 18]
+    nums = [10, 9, 2, 5, 3, 7, 101]
     print(Solution().length_of_LIS(nums))
     print(Solution().dp_method(nums))
