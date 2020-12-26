@@ -48,7 +48,7 @@ from bisect import bisect
 
 
 class Solution:
-    #
+    # 112ms, 15.3MB
     @staticmethod
     def next_greatest_letter(letters: List[str], target: str) -> str:
         index = bisect(letters, target)
