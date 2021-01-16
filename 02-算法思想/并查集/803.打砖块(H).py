@@ -77,8 +77,8 @@ class Solution:
             if not grid[x][y]:
                 drop.append(0)
                 continue
-            if x != 0 and not judge(x - 1, y, grid) + judge(x + 1, y, grid) + \
-                              judge(x, y - 1, grid) + judge(x, y + 1, grid):
+            if x != 0 and not judge(x - 1, y, grid) + judge(x + 1, y, grid) + judge(x, y - 1, grid) + \
+                              judge(x, y + 1, grid):
                 drop.append(0)
                 continue
             current = visit(x, y, grid)
@@ -92,8 +92,7 @@ def visit(i, j, grid) -> int:
     if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] != 1:
         return 0
     grid[i][j] = grid[i][j] + 1
-    return visit(i - 1, j, grid) + visit(i + 1, j, grid) + \
-           visit(i, j - 1, grid) + visit(i, j + 1, grid) + 1
+    return visit(i - 1, j, grid) + visit(i + 1, j, grid) + visit(i, j - 1, grid) + visit(i, j + 1, grid) + 1
 
 
 def judge(i, j, grid) -> int:
