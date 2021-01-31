@@ -28,7 +28,7 @@ from typing import List
 
 
 class Solution:
-    #
+    # 292ms, 15.3MB
     @staticmethod
     def num_similar_groups(strs: List[str]) -> int:
         n = len(strs)
