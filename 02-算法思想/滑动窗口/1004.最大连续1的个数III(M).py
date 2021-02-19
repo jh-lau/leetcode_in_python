@@ -28,7 +28,7 @@ from typing import List
 
 
 class Solution:
-    #
+    # 728ms, 15.4MB
     @staticmethod
     def longest_ones(A: List[int], K: int) -> int:
         n = len(A)
