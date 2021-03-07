@@ -36,7 +36,7 @@ class Solution:
 
 if __name__ == '__main__':
     test_cases = [
-        [1, 2, 1]
+        [1, 2, 1], [1, 2, 23, 4, 2, 1]
     ]
     for test_case in test_cases:
         print(Solution.next_greater_elements(test_case))
