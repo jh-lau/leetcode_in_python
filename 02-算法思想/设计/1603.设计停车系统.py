@@ -24,7 +24,6 @@
     parkingSystem.addCar(1); // 返回 false ，因为没有空的大车位，唯一一个大车位已经被占据了
 
     提示：
-
     0 <= big, medium, small <= 1000
     carType 取值为 1， 2 或 3
     最多会调用 addCar 函数 1000 次
