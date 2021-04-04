@@ -3,7 +3,7 @@
   @Date         : 21/3/5 9:32
   @Project      : leetcode_in_python
   @FileName     : 232.用栈实现队列.py
-  @Description  : Placeholder
+  @Description  :
 """
 
 
